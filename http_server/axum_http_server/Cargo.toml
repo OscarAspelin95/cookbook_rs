@@ -1,0 +1,12 @@
+[package]
+name = "axum_http_server"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+axum = {version = "0.8.8"}
+tokio = {version = "1.49.0", features = ["full"]}
+tower-http = {version = "0.6.8", features = ["cors"]}
+thiserror = {version = "2.0.18"}
+tracing = {version = "0.1.44"}
+tracing-subscriber = {version = "0.3.22"}
