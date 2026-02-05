@@ -1,6 +1,14 @@
+use std::fmt;
+
 /// Trait that can be shared between geometric objects with an area that can be calculated.
 pub trait Area {
     fn area(&self) -> usize;
+}
+
+impl fmt::Debug for dyn Area {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "Area({})", self.area())
+    }
 }
 
 // Triangle
