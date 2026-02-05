@@ -1,0 +1,15 @@
+[workspace]
+members = [
+	# Structs
+	"recipes/structs/validation",
+	# HTTP
+	"recipes/http/axum_basic",
+	# Testing
+	"recipes/test_framework/rstest_basic",
+	# Serialization
+	"recipes/serde/read_write_json",
+	# Traits
+	"recipes/traits/traits_basic",
+	"recipes/traits/eq_and_ordering"
+]
+resolver = "3"

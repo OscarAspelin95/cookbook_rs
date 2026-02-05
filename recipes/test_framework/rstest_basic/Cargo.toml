@@ -1,0 +1,7 @@
+[package]
+name = "rstest_basic"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+rstest = "0.26.1"
