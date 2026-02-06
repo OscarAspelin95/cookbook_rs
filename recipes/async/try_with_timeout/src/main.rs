@@ -14,8 +14,6 @@ use simple_logger::SimpleLogger;
 /// FnMut() ensures a closure that can be called multiple times and that returns a future once called.
 ///
 /// Hence `let fut_factory = || async {...}` is of type FnMut() that once called (e.g., fut_factory()), returns `async {...}` which is a future.
-///
-/// We need
 async fn try_with_timeout<T, F, Fut>(
     mut fut_factory: F,
     timeout: u64,
@@ -50,16 +48,15 @@ async fn main() {
         .init()
         .expect("Failed to initialize logger");
 
-    match try_with_timeout(
-        || async {
-            tokio::time::sleep(Duration::from_secs(2)).await;
-            "This is an output".to_string()
-        },
-        1,
-        3,
-    )
-    .await
-    {
+    let url = "some_url".to_string();
+
+    let fut_factory = || async {
+        info!("Mock fetching stuff from...{}", url);
+        tokio::time::sleep(Duration::from_secs(2)).await;
+        "This is an output".to_string()
+    };
+
+    match try_with_timeout(fut_factory, 1, 3).await {
         Ok(result) => info!("Got result {:?}", result),
         Err(e) => error!("{e}"),
     };
