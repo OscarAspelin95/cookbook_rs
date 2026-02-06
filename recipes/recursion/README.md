@@ -1,5 +1,5 @@
 # Problem
-You need a generic interface that can be shared across datastructures
+You need implement recursion, e.g., something that calls itself.
 
 # Solution
 Check the available recipes in each sub-directory.
