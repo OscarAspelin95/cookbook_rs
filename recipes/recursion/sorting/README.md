@@ -1,5 +1,5 @@
 # Problem
-You need to implement your own recursive sorting function for a Vec<i64>.
+You need to implement your own recursive sorting function that also can be generic over Vec<T> where T: PartialOrd.
 
 # Solution
 Implement a variant of quicksort/mergesort that recursively sorts the input.
