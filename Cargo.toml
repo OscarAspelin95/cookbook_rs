@@ -19,5 +19,8 @@ members = [
 	# Recursion
 	"recipes/recursion/sorting",
 	"recipes/recursion/fibonacci",
+	# Generics
+	"recipes/generics/structs",
+	"recipes/generics/stack",
 	]
 resolver = "3"
