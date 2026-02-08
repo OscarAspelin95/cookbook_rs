@@ -82,6 +82,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "axum_custom_extractors"
+version = "0.0.1"
+dependencies = [
+ "axum",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tower-http",
+ "tracing",
+ "tracing-subscriber",
+ "validator",
+]
+
+[[package]]
 name = "background_interval_task"
 version = "0.0.1"
 dependencies = [

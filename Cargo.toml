@@ -4,6 +4,7 @@ members = [
 	"recipes/structs/validation",
 	# HTTP
 	"recipes/http/axum_basic",
+	"recipes/http/axum_custom_extractors",
 	# Testing
 	"recipes/test_framework/parametrization",
 	# Serialization
